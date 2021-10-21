@@ -5,13 +5,13 @@ import java.util.List;
 public class Zoo {
 
     int visiteur;
-    List<String> secteurAnimaux = new ArrayList<>();
+    List<Secteur> secteurAnimaux = new ArrayList<>();
 
     public Zoo(){
 
     }
 
-    public void ajouterSecteur(String secteur){
+    public void ajouterSecteur(Secteur secteur){
         secteurAnimaux.add(secteur);
     }
 
