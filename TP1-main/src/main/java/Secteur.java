@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-public class Secteur {
+public class Secteur implements Comparable<Secteur>{
 
 	private List<Animal> animauxDansSecteur = new ArrayList<Animal>();
 	private TypeAnimal typeAnimauxDansSecteur;
@@ -24,5 +25,10 @@ public class Secteur {
 	
 	public TypeAnimal obtenirType(){
 		return typeAnimauxDansSecteur;
+	}
+
+	@Override
+	public int compareTo(Secteur otherSecteur){
+		return Integer.compare(getNombreAnimaux(),otherSecteur.getNombreAnimaux());
 	}
 }
